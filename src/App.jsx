@@ -50,7 +50,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="service" element={<Service />} />
-          <Route path="career" element={<div>Career Page</div>} /> {/* Add a valid element */}
+          {/* <Route path="career" element={<div>Career Page</div>} /> Add a valid element */}
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="service_list" element={<ServicesList />} />

@@ -91,7 +91,7 @@ function Navbar() {
                 isActive("/career") ? "font-bold text-black" : "text-gray-500"
               }`}
             >
-              <Link to="/career">Career</Link>
+              Career
             </li>
           </ul>
         </div>

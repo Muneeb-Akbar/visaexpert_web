@@ -33,9 +33,9 @@ function Banner2() {
   }, [currentSlide]);
 
   return (
-    <div className="px-6 md:px-[6vw] flex gap-3">
+    <div className="px-6 md:px-[6vw] flex gap-3 mt-24  md:mt-0">
       <div className="left">
-        <img src={img3} className="w-full h-full rounded-lg object-fill" alt="" />
+        <img src={img3} className="hidden md:block md:w-full md:h-full rounded-lg object-fill" alt="" />
       </div>
 
       <div className="right">

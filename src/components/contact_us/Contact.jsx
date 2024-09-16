@@ -11,111 +11,120 @@ function Contact() {
   return (
     <>
       <Navbar />
-      <div className="px-6 md:pl-[6vw] md:pr-0 flex flex-col justify-center  md:flex-row mt-12 md:mt-0">
-        <div className="md:pt-24">
-          <span className=" text-3xl text-blue-theme font-inter font-bold  md:font-semibold md:text-4xl ">
-            <span className="text-3xl font-inter  md:font-semibold  md:text-4xl text-red-theme">
-              CONTACT
-            </span>{" "}
-            US
-          </span>
-          <p className="text-gray-500 mb-6 mt-8 md:text-xl">
-            Our team at Visa Expert is here to help! Whether you need advice on
-            the right visa for your travel plans or support throughout the
-            application process, we're just a message away. Contact us today,
-            and let our experts guide you to a successful visa outcome.
-          </p>
-          <div class="border-t-8 rounded-full border-grey my-4 mt-20"></div>
+      <div className="px-6 md:px-[6vw] flex flex-col md:flex-row mt-12 md:mt-0 gap-8">
+  <div className="md:pt-24 flex-1 md:w-1/2">
+    <span className="text-3xl text-blue-theme font-inter font-bold md:font-semibold md:text-4xl">
+      <span className="text-red-theme">CONTACT</span> US
+    </span>
+    <p className="text-gray-500 mb-6 mt-8 md:text-xl">
+      Our team at Visa Expert is here to help! Whether you need advice on
+      the right visa for your travel plans or support throughout the
+      application process, we're just a message away. Contact us today,
+      and let our experts guide you to a successful visa outcome.
+    </p>
+    <div className="border-t-8 rounded-full border-grey my-4 mt-20"></div>
+    <p className="text-3xl font-inter font-semibold md:text-4xl">
+      Travel beyond your imagination,
+      <br />
+      with{" "}
+      <span className="text-red-theme font-inter font-semibold">
+        Visa Expert
+      </span>
+    </p>
+  </div>
+  <div className="md:w-1/2 mt-8 md:mt-0">
+    <img 
+      src={logo} 
+      alt="Logo" 
+      className="w-full h-auto max-h-[400px] md:max-h-[700px] object-contain" 
+    />
+  </div>
+</div>
 
-          <p className="flex flex-col mt-6">
-            <p className="flex flex-col md:flex-row gap-2 f">
-              <span className=" text-3xl font-inter font-semibold md:text-4xl">
-                Travel beyond your imagination, <br />
-                with{" "}
-                <span className="text-red-theme text-3xl font-inter font-semibold md:text-4xl">
-                  Visa Expert
-                </span>
-              </span>
-            </p>
-          </p>
+<div className="px-6 md:px-[6vw] flex flex-col md:flex-row justify-between mt-10 flex-wrap gap-16">
+  {/* Location Section */}
+  <div className="w-auto flex items-center flex-col">
+    <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center w-28 h-auto">
+        {/* Round container for image */}
+        <div className="w-24 h-24 rounded-full flex justify-center items-center overflow-hidden bg-gray-200">
+          <img src={location} alt="Location Icon" className="w-full h-full object-cover" />
         </div>
-        <div className="md:w-[127rem]">
-          <img src={logo} alt="" />
-        </div>
+        <span className="text-xs mt-2">LOCATION</span>
       </div>
-      <div className="px-6 md:px-[6vw]  flex flex-col md:flex-row md:justify-between mt-10 flex-wrap gap-16">
-        <div className="w-auto flex  items-center flex-col">
-          <div className=" flex flex-col justify-center items-center">
-            <div className="flex flex-col  items-center w-28 h-auto">
-              <div className="w-24 h-28 flex justify-center items-center">
-                <img src={location} alt="" />
-              </div>
-              <span className="text-xs">LOCATION</span>
-            </div>
-          </div>
-          <p className="text-gray-600 text-center text-sm mt-2">
-            1626 Michigan, <br /> Ave Miami Beach FL 33139, <br /> United States
-          </p>
+    </div>
+    <p className="text-gray-600 text-center text-sm mt-2">
+      1626 Michigan Ave, <br />
+      Miami Beach, FL 33139, <br />
+      United States
+    </p>
+  </div>
+
+  {/* Write for Anything Section */}
+  <div className="w-auto flex items-center flex-col">
+    <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center w-28 h-auto">
+        {/* Round container for image */}
+        <div className="w-24 h-24 rounded-full flex justify-center items-center overflow-hidden bg-gray-200">
+          <img src={mail} alt="Mail Icon" className="w-full h-full object-cover" />
         </div>
-        <div className="w-auto flex  items-center flex-col">
-          <div className=" flex flex-col justify-center items-center">
-            <div className="flex flex-col  items-center w-28 h-auto">
-              <div className="w-24 h-28 flex justify-center items-center">
-                <img src={mail} alt="" />
-              </div>
-              <span className="text-xs w-[9rem]">WRITE FOR ANYTHING</span>
-            </div>
-          </div>
-          <p className="text-gray-600 text-sm mt-2 w-[15rem] text-center">
-            info@visaexpert.com <br />
-            info@visaexpert.com <br />
-            info@visaexpert.com <br />
-          </p>
-        </div>
-        <div className="w-auto flex  items-center flex-col ">
-          <div className=" flex flex-col justify-center items-center">
-            <div className="flex flex-col  items-center w-28 h-auto">
-              <div className="w-24 h-28 flex justify-center items-center">
-                <img src={phone} alt="" />
-              </div>
-              <span className="text-xs">GIVE US CALL</span>
-            </div>
-          </div>
-          <p className="text-gray-600 text-sm mt-2 w-[20rem] text-center">
-            Tour Consultant : +1 629 592 593 <br />
-            Administration : +1 184 016 482 <br />
-            Technical Office +1 963 935 836
-          </p>
-        </div>
+        <span className="text-xs mt-2 text-center">
+          WRITE FOR ANYTHING
+        </span>
       </div>
-      <div className="relative px-6 h-auto mt-32 md:px-[6vw]  flex flex-col gap-12  lg:flex-row bg-white p-8 rounded-lg  md:h-[39rem] max-w-full mx-auto">
+    </div>
+    <p className="text-gray-600 text-center text-sm mt-2">
+      info@visaexpert.com <br />
+      support@visaexpert.com
+    </p>
+  </div>
+
+  {/* Phone Section */}
+  <div className="w-auto flex items-center flex-col">
+    <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center w-28 h-auto">
+        {/* Round container for image */}
+        <div className="w-24 h-24 rounded-full flex justify-center items-center overflow-hidden bg-gray-200">
+          <img src={phone} alt="Phone Icon" className="w-full h-full object-cover" />
+        </div>
+        <span className="text-xs mt-2">GIVE US A CALL</span>
+      </div>
+    </div>
+    <p className="text-gray-600 text-center text-sm mt-2">
+      Tour Consultant: +1 629 592 593 <br />
+      Administration: +1 184 016 482 <br />
+      Technical Office: +1 963 935 836
+    </p>
+  </div>
+</div>
+
+      <div className="relative px-6 md:px-[6vw] flex flex-col gap-12 lg:flex-row bg-white p-8 rounded-lg mt-32 md:h-[39rem] max-w-full mx-auto">
         {/* Left Section */}
-        <div className="flex-1 flex flex-col  ">
+        <div className="flex-1 flex flex-col">
           <div className="text-left">
             <h2 className="text-lg font-bold mt-2 mb-4">
               Explore the world with us, one adventure at a time.
             </h2>
-            <p className="text-gray-500 mb-6 text-balance">
+            <p className="text-gray-500 mb-6">
               We are a team of experienced travel experts who specialize in
               planning and organizing unforgettable travel experiences for our
               clients with a wide range of travel services, including flight
-              bookings, hotel reservations and more.
+              bookings, hotel reservations, and more.
             </p>
-            <div class="border-t-8 rounded-full border-grey my-4 mt-20"></div>
-            <p className="text-gray-500 mt-6 text-balance">
-              Local travel guides
-            </p>
-            <button className="px-9 py-4 text-white mt-24  bg-button-color">
+            <div className="border-t-8 rounded-full border-grey my-4"></div>
+            <p className="text-gray-500 mt-6">Local travel guides</p>
+            <button className="px-9 py-4 text-white mt-24 bg-button-color">
               MORE INFO
             </button>
           </div>
         </div>
 
         {/* Right Section */}
-        <div className="flex-1 flex md:justify-center item relative mt-8 lg:mt-0 lg:ml-8">
-          <img className="" src={img} alt="" />
+        <div className="flex-1 flex justify-center items-center relative mt-8 lg:mt-0">
+          <img src={img} alt="Travel Image" className="md:w-[70%]" />
         </div>
       </div>
+
       <ContactForm />
       <Footer />
     </>
