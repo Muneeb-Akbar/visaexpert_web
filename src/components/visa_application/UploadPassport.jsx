@@ -117,9 +117,9 @@ function UploadPassport() {
   return (
     <>
       <div>
-        <div id="header">
+        <div id="header" >
           <Link to="/">
-            <div className="flex items-center cursor-pointer md:px-[6vw] mb-6">
+            <div className="flex items-center cursor-pointer px-6 md:px-[6vw] mb-6">
               <img src={logo} className="h-20 w-20" alt="Logo" />
               <div className="flex flex-col ml-2">
                 <span className="flex-none font-bold text-lg">Visa Expert</span>
@@ -136,7 +136,7 @@ function UploadPassport() {
           {/* Left section with steps */}
           <div
             id="left"
-            className="flex flex-col shadow-lg px-3 py-10 mb-6 md:mb-0"
+            className="flex hidden md:block flex-col shadow-lg px-3 py-10 mb-6 md:mb-0"
           >
             {["Dates", "Photo", "Passport", "Detail", "Cheakout"].map(
               (step, index) => (

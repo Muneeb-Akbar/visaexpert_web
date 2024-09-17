@@ -16,7 +16,7 @@ function Checkout() {
       <div>
         <div id="header">
           <Link to="/">
-            <div className="flex items-center cursor-pointer md:px-[6vw] mb-6">
+            <div className="flex items-center cursor-pointer px-6 md:px-[6vw] mb-6">
               <img src={logo} className="h-20 w-20" alt="Logo" />
               <div className="flex flex-col ml-2">
                 <span className="flex-none font-bold text-lg">Visa Expert</span>
@@ -33,7 +33,7 @@ function Checkout() {
           {/* Left */}
           <div
             id="left"
-            className="flex flex-col shadow-lg px-3 py-10 mb-6 md:mb-0"
+            className="flex flex-col hidden md:block shadow-lg px-3 py-10 mb-6 md:mb-0"
           >
             {["Dates", "Photo", "Passport", "Detail", "Cheakout"].map(
               (step, index) => (
@@ -66,16 +66,21 @@ function Checkout() {
           {/* Center */}
           <div
             id="center"
-            className="flex flex-col justify-center items-center md:ml-8 lg:ml-32 mb-6 md:mb-0"
+            className="flex flex-col justify-center items-center md:ml-8 lg:ml-32 mb-6 md:mb-0 px-6"
+           
           >
             <div className="relative flex gap-2 bg-blue-theme px-8 py-2  justify-center items-center rounded-full">
               <img src={trust} className="" alt="" />
               <p className="text-white">Visa on 19 sep, 1174 PM</p>
             </div>
-            <div className="mt-20 shadow-2xl px-10 py-14 w-[26rem] rounded-xl ">
+            <div className="mt-20 shadow-2xl px-10 py-14 w-[26rem] rounded-xl "
+             style={{ boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)" }} 
+            >
               <p className="text-sm font-bold">Australia Visa</p>
               <div className="mt-2">
-                <span className="text-xs p-1  bg-gray-300 block w-[7rem] rounded-xl px-2">view passenger</span>
+                <span className="text-xs p-1  bg-gray-300 block w-[7rem] rounded-xl px-2">
+                  view passenger
+                </span>
               </div>
               <div className="flex justify-between gap-20 mt-6">
                 <p className="text-xs font-semibold  mt-2">VisaExpert fee</p>
@@ -90,12 +95,11 @@ function Checkout() {
                 Pay our service fee only when we deliver visa on time
               </p>
 
-            <Link to={"/"}>
-              <button className="text-xs text-center bg-yellow-500 rounded-lg w-full py-3 mt-3">
-                
-                Pay Visa Fee & Submit
-              </button>
-            </Link>
+              <Link to={"/"}>
+                <button className="text-xs text-center bg-yellow-500 rounded-lg w-full py-3 mt-3">
+                  Pay Visa Fee & Submit
+                </button>
+              </Link>
             </div>
           </div>
           {/* Right */}

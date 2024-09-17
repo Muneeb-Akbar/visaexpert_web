@@ -69,7 +69,7 @@ function Detail() {
       <div>
         <div id="header">
           <Link to="/">
-            <div className="flex items-center cursor-pointer md:px-[6vw] mb-6">
+            <div className="flex items-center cursor-pointer px-6 md:px-[6vw] mb-6">
               <img src={logo} className="h-20 w-20" alt="Logo" />
               <div className="flex flex-col ml-2">
                 <span className="flex-none font-bold text-lg">Visa Expert</span>
@@ -81,12 +81,12 @@ function Detail() {
         </div>
         <div
           id="main"
-          className="flex flex-col md:flex-row items-center md:items-start justify-between"
+          className=" flex flex-col md:flex-row items-center md:items-start  justify-between"
         >
           {/* Left */}
           <div
             id="left"
-            className="flex flex-col shadow-lg px-3 py-10 mb-6 md:mb-0"
+            className="flex hidden md:block  flex-col shadow-lg px-3 py-10 mb-6 md:mb-0"
           >
             {["Dates", "Photo", "Passport", "Detail", "Checkout"].map(
               (step, index) => (
@@ -121,7 +121,7 @@ function Detail() {
           {button ? (
             <div
               id="center"
-              className="flex flex-col justify-center items-center md:ml-8 lg:ml-32 mb-6 md:mb-0"
+              className="px-6 flex flex-col justify-center items-center md:ml-8 lg:ml-32 mb-6 md:mb-0"
             >
               <div>
                 <div className="relative flex gap-2 bg-blue-theme px-8 py-2 justify-center items-center rounded-full">

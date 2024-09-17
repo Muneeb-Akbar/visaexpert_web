@@ -12,6 +12,9 @@ import Banner2 from "./Banner2"
 function Home() {
     return (
         <>
+        <div className="px-6 md:px-[6vw]">
+
+        </div>
         <Navbar/>
         <Banner/>
         <SearchSection/>

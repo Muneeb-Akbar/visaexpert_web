@@ -13,12 +13,11 @@ import img2 from "../../assets/images/Group 9331.png";
 import Camera from "./Camera";
 import { UseApplicationContext } from "../../contexts/applicationContext";
 
-
 function UploadPhoto() {
   // ========================================
   const webcamRef = useRef(null);
   const [imageSrc, setImageSrc] = useState(null);
- 
+
   const [takePhoto, setTakePhoto] = useState(true);
   const capture = () => {
     const image = webcamRef.current.getScreenshot();
@@ -33,7 +32,7 @@ function UploadPhoto() {
   const [selectedFile, setSelectedFile] = useState(null);
   const { photo_img, setPhotoImg } = UseApplicationContext();
   const [preview, setPreview] = useState(photo_img || "");
-  
+
   // Update the username in context when name changes and only if username doesn't already exist
   useEffect(() => {
     if (photo_img !== preview) {
@@ -43,10 +42,9 @@ function UploadPhoto() {
   }, [preview, photo_img, setPhotoImg]);
 
   const v = UseApplicationContext();
-  console.log(v)
+  console.log(v);
 
-  const 
-  imageCapture = (data) => {
+  const imageCapture = (data) => {
     setPreview(data);
   };
 
@@ -71,9 +69,9 @@ function UploadPhoto() {
   return (
     <>
       <div>
-        <div id="header">
+        <div id="header" className="">
           <Link to="/">
-            <div className="flex items-center cursor-pointer md:px-[6vw] mb-6">
+            <div className="flex items-center cursor-pointer px-6 md:px-[6vw] mb-6">
               <img src={logo} className="h-20 w-20" alt="Logo" />
               <div className="flex flex-col ml-2">
                 <span className="flex-none font-bold text-lg">Visa Expert</span>
@@ -83,6 +81,26 @@ function UploadPhoto() {
             </div>
           </Link>
         </div>
+        {/* <Link to={"/application/phone"}>
+          <div className="px-6 pb-3">
+            <button class="bg-gray-100 text-black font-bold py-2 px-4 rounded-full flex items-center space-x-2 shadow-md">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9.707 14.707a1 1 0 01-1.414 0L3.586 10l4.707-4.707a1 1 0 011.414 1.414L6.414 10l3.293 3.293a1 1 0 010 1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span>Back</span>
+            </button>
+          </div>
+        </Link> */}
+
         <div
           id="main"
           className="flex flex-col md:flex-row items-center md:items-start justify-between"
@@ -90,7 +108,7 @@ function UploadPhoto() {
           {/* Left */}
           <div
             id="left"
-            className="flex flex-col shadow-lg px-3 py-10 mb-6 md:mb-0"
+            className="flex md:flex-col flex-wrap shadow-lg px-3 py-10 mb-6 md:mb-0 hidden md:block"
           >
             {["Dates", "Photo", "Passport", "Detail", "Cheakout"].map(
               (step, index) => (
@@ -114,7 +132,7 @@ function UploadPhoto() {
                     />
                   </div>
                   {index < 4 && (
-                    <div className="bg-blue-theme h-12 w-[1px]"></div>
+                    <div className="bg-blue-theme md:h-12 md:w-[1px] h-1 w-12"></div>
                   )}
                 </div>
               )
